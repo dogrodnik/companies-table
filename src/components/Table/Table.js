@@ -26,20 +26,25 @@ export const Table = () => {
   }, [companiesArray, currentPage]);
 
   return (
-    <>
-      <Search />
-      <table>
-        <Header
+    companiesArray && (
+      <>
+        <Search
           companiesArray={companiesArray}
           setCompaniesArray={setCompaniesArray}
         />
-        <Content companies={companiesToDisplay} />
-      </table>
-      <Pagination
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        pages={pages}
-      />
-    </>
+        <table>
+          <Header
+            companiesArray={companiesArray}
+            setCompaniesArray={setCompaniesArray}
+          />
+          <Content companies={companiesToDisplay} />
+        </table>
+        <Pagination
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          pages={pages}
+        />
+      </>
+    )
   );
 };

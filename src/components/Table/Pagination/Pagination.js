@@ -1,8 +1,6 @@
 import React from "react";
 
 export const Pagination = ({ currentPage, setCurrentPage, pages }) => {
-  console.log(currentPage);
-
   const pageDown = () => {
     if (currentPage > 0) setCurrentPage((prevPage) => prevPage - 1);
   };
