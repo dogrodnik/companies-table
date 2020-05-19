@@ -16,7 +16,7 @@ export const Table = () => {
 
   useEffect(() => {
     if (companiesArray) {
-      setPages(companiesArray.length / 20);
+      setPages(Math.ceil(companiesArray.length / 20));
       const companieSlice = companiesArray.slice(
         currentPage * COMPANIES_ON_PAGE,
         currentPage * COMPANIES_ON_PAGE + COMPANIES_ON_PAGE
@@ -29,7 +29,10 @@ export const Table = () => {
     <>
       <Search />
       <table>
-        <Header />
+        <Header
+          companiesArray={companiesArray}
+          setCompaniesArray={setCompaniesArray}
+        />
         <Content companies={companiesToDisplay} />
       </table>
       <Pagination
