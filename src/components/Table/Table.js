@@ -26,15 +26,17 @@ export const Table = () => {
   }, [companiesArray, currentPage]);
 
   return (
-    <div>
+    <>
       <Search />
-      <Header />
-      <Content companies={companiesToDisplay} />
+      <table>
+        <Header />
+        <Content companies={companiesToDisplay} />
+      </table>
       <Pagination
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         pages={pages}
       />
-    </div>
+    </>
   );
 };

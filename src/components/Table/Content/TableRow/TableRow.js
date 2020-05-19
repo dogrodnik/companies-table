@@ -9,13 +9,13 @@ export const TableRow = ({
   lastMonthIncome,
 }) => {
   return (
-    <div style={{ width: "100%", display: "flex" }}>
-      <div>{id}</div>
-      <div>{name}</div>
-      <div>{city}</div>
-      <div>{totalIncome}</div>
-      <div>{averageIncome}</div>
-      <div>{lastMonthIncome}</div>
-    </div>
+    <tr>
+      <td>{id}</td>
+      <td>{name}</td>
+      <td>{city}</td>
+      <td>{totalIncome}</td>
+      <td>{averageIncome}</td>
+      <td>{lastMonthIncome}</td>
+    </tr>
   );
 };
