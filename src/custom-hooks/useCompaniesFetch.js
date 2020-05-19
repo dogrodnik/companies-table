@@ -6,7 +6,7 @@ export const useCompaniesFetch = () => {
   const [companiesData, setCompaniesData] = useState(null);
   const [error, setError] = useState(null);
 
-  //FETCH COMPANIES DATA
+  //GET COMPANIES DATA AND ICOMES
   useEffect(() => {
     const fetchData = async () => {
       try {
