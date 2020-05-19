@@ -1,5 +1,1 @@
-import React from "react";
-
-export const Search = () => {
-  return <div>Search</div>;
-};
+export { Search } from "./Search";
