@@ -2,15 +2,20 @@ import React from "react";
 
 export const Pagination = ({ currentPage, setCurrentPage, pages }) => {
   console.log(currentPage);
+
+  const pageDown = () => {
+    if (currentPage > 0) setCurrentPage((prevPage) => prevPage - 1);
+  };
+
+  const pageUp = () => {
+    if (currentPage + 1 < pages) setCurrentPage((prevPage) => prevPage + 1);
+  };
+
   return (
     <div>
-      <button onClick={() => setCurrentPage((prevPage) => prevPage - 1)}>
-        Previous
-      </button>
+      <button onClick={() => pageDown()}>Previous</button>
       <div>{`${currentPage + 1}/${pages}`}</div>
-      <button onClick={() => setCurrentPage((prevPage) => prevPage + 1)}>
-        Next
-      </button>
+      <button onClick={() => pageUp()}>Next</button>
     </div>
   );
 };
