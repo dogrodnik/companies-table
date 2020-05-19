@@ -27,7 +27,7 @@ export const getCompaniesInfo = async () => {
 const getTotalIncome = (incomes) =>
   incomes.reduce((sum, income) => sum + parseFloat(income.value), 0);
 
-//LAST MONTH INCOME FROM AVAILABLE DATES
+//LAST MONTH INCOME DUE TO AVAILABLE DATES
 const getLastMonthIncome = (incomes) => {
   return incomes
     .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))

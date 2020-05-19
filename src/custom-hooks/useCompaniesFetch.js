@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { getCompaniesInfo } from "../utils/getCompaniesInfo";
 
 export const useCompaniesFetch = () => {
-  const [companiesData, setCompaniesData] = useState(null);
+  const [companiesArray, setCompaniesArray] = useState(null);
   const [error, setError] = useState(null);
 
   //GET COMPANIES DATA AND ICOMES
@@ -11,7 +11,7 @@ export const useCompaniesFetch = () => {
     const fetchData = async () => {
       try {
         const companiesInfo = await getCompaniesInfo();
-        setCompaniesData(companiesInfo);
+        setCompaniesArray(companiesInfo);
       } catch (error) {
         setError(error);
       }
@@ -19,9 +19,5 @@ export const useCompaniesFetch = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    console.log(companiesData);
-  });
-
-  return { companiesData, error };
+  return [companiesArray, setCompaniesArray, error];
 };
