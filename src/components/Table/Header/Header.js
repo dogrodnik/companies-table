@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import { sort } from "../../../utils/sort";
@@ -13,7 +13,12 @@ export const Header = ({ companies, setCompanies }) => {
     lastMonthIncome: false,
   });
 
-  const sortCompanies = async ({ target: { id: searchType } }) => {
+  useEffect(() => {
+    sortCompanies("id");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const sortCompanies = async (searchType) => {
     const sortedCompanies = await sort(
       companies,
       searchType,
@@ -26,24 +31,11 @@ export const Header = ({ companies, setCompanies }) => {
   return (
     <thead>
       <tr>
-        <th id="id" onClick={(e) => sortCompanies(e)}>
-          ID
-        </th>
-        <th id="name" onClick={(e) => sortCompanies(e)}>
-          Name
-        </th>
-        <th id="city" onClick={(e) => sortCompanies(e)}>
-          City
-        </th>
-        <th id="totalIncome" onClick={(e) => sortCompanies(e)}>
-          Total Income
-        </th>
-        <th id="averageIncome" onClick={(e) => sortCompanies(e)}>
-          Average Income
-        </th>
-        <th id="lastMonthIncome" onClick={(e) => sortCompanies(e)}>
-          Last Month Income
-        </th>
+        {Object.keys(sortType).map((key) => (
+          <th id={key} onClick={({ target: { id } }) => sortCompanies(id)}>
+            {key.split(/(?=[A-Z])/).join(" ")}
+          </th>
+        ))}
       </tr>
     </thead>
   );

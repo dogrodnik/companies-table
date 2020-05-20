@@ -167,6 +167,14 @@ table thead {
   background-color: #6c7ae0;
 }
 
+table thead tr {
+  text-transform: capitalize;
+}
+
+table thead tr :first-child {
+  text-transform: uppercase;
+}
+
 table th {
   font-family: "Lato-Bold";
   color: white;
