@@ -1,0 +1,16 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0rem;
+  p {
+    font-size: 1.25rem;
+    min-width: 5rem;
+    text-align: center;
+  }
+  img {
+    height: 1.5rem;
+    filter: invert(48%) sepia(93%) saturate(497%) hue-rotate(199deg)
+      brightness(88%) contrast(99%);
+  }
+}

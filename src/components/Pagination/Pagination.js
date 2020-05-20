@@ -1,4 +1,6 @@
 import React from "react";
+import leftArrow from "../../assets/arrow-left.png";
+import rightArrow from "../../assets/arrow-right.png";
 
 export const Pagination = ({ currentPage, setCurrentPage, pages }) => {
   const pageDown = () => {
@@ -10,10 +12,10 @@ export const Pagination = ({ currentPage, setCurrentPage, pages }) => {
   };
 
   return (
-    <div>
-      <button onClick={() => pageDown()}>Previous</button>
-      <div>{`${currentPage + 1}/${pages}`}</div>
-      <button onClick={() => pageUp()}>Next</button>
+    <div className="pagination">
+      <img src={leftArrow} alt="Previous" onClick={() => pageDown()} />
+      <p>{`${currentPage + 1}/${pages}`}</p>
+      <img src={rightArrow} alt="Next" onClick={() => pageUp()} />
     </div>
   );
 };

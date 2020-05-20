@@ -5,6 +5,7 @@
   padding: 0;
   font-size: 16px;
   font-family: "Lato-Regular", "Roboto", sans-serif;
+  color: #808080;
 }
 
 @media only screen and (max-width: 600px) {
@@ -29,6 +30,31 @@
   src: local("Lato-Regular"), url(../fonts/Lato-Regular.ttf) format("truetype");
 }
 
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0rem;
+}
+
+.pagination p {
+  font-size: 1.25rem;
+  min-width: 5rem;
+  text-align: center;
+}
+
+.pagination img {
+  height: 1.5rem;
+  -webkit-filter: invert(48%) sepia(93%) saturate(497%) hue-rotate(199deg) brightness(88%) contrast(99%);
+          filter: invert(48%) sepia(93%) saturate(497%) hue-rotate(199deg) brightness(88%) contrast(99%);
+}
+
 .search {
   display: -ms-grid;
   display: grid;
@@ -36,7 +62,6 @@
 
 .search input {
   place-self: center;
-  color: #808080;
   font-size: 1.25rem;
   border: 0;
   border-bottom: 0.1rem solid #808080;
