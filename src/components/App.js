@@ -7,33 +7,37 @@ import { Search } from "./Search";
 import { Table } from "./Table";
 
 function App() {
-  const [companiesArray, setCompaniesArray, error] = useCompaniesFetch();
+  const [loading, setLoading] = useState(true);
+  const [companies, setCompanies, error] = useCompaniesFetch(setLoading);
   const [companiesToDisplay, setCompaniesToDisplay] = useState([]);
   const [pages, setPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
   const ROWS_ON_PAGE = 15;
 
   useEffect(() => {
-    if (companiesArray) {
-      setPages(Math.ceil(companiesArray.length / ROWS_ON_PAGE));
-      const companieSlice = companiesArray.slice(
+    if (companies) {
+      setPages(Math.ceil(companies.length / ROWS_ON_PAGE));
+      const companieSlice = companies.slice(
         currentPage * ROWS_ON_PAGE,
         currentPage * ROWS_ON_PAGE + ROWS_ON_PAGE
       );
       setCompaniesToDisplay(companieSlice);
     }
-  }, [companiesArray, currentPage]);
+  }, [companies, currentPage]);
+
+  if (error) return <div>Error</div>;
+  if (loading) return <div>Loading</div>;
 
   return (
     <div className="App">
       <Search
-        companiesArray={companiesArray}
-        setCompaniesArray={setCompaniesArray}
+        companies={companies}
+        setCompanies={setCompanies}
         setCurrentPage={setCurrentPage}
       />
       <Table
-        companiesArray={companiesArray}
-        setCompaniesArray={setCompaniesArray}
+        companies={companies}
+        setCompanies={setCompanies}
         companiesToDisplay={companiesToDisplay}
       />
       <Pagination

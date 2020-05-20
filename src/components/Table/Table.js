@@ -3,19 +3,12 @@ import React from "react";
 import { Header } from "./Header";
 import { Content } from "./Content";
 
-export const Table = ({
-  companiesArray,
-  setCompaniesArray,
-  companiesToDisplay,
-}) => {
+export const Table = ({ companies, setCompanies, companiesToDisplay }) => {
   return (
-    companiesArray && (
+    companies && (
       <div className="table__wrapper">
         <table>
-          <Header
-            companiesArray={companiesArray}
-            setCompaniesArray={setCompaniesArray}
-          />
+          <Header companies={companies} setCompanies={setCompanies} />
           <Content companies={companiesToDisplay} />
         </table>
       </div>

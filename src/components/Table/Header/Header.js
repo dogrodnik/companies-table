@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { sort } from "../../../utils/sort";
 
-export const Header = ({ companiesArray, setCompaniesArray }) => {
+export const Header = ({ companies, setCompanies }) => {
   const [sortType, setSortType] = useState({
     id: false,
     name: false,
@@ -14,12 +14,12 @@ export const Header = ({ companiesArray, setCompaniesArray }) => {
 
   const sortCompanies = async ({ target: { id: searchType } }) => {
     const sortedCompanies = await sort(
-      companiesArray,
+      companies,
       searchType,
       sortType[searchType]
     );
     setSortType({ ...sortType, [searchType]: !sortType[searchType] });
-    setCompaniesArray([...sortedCompanies]);
+    setCompanies([...sortedCompanies]);
   };
 
   return (

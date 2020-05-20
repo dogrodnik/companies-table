@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { getCompaniesInfo } from "../utils/getCompaniesInfo";
 
-export const useCompaniesFetch = () => {
+export const useCompaniesFetch = (setLoading) => {
   const [companiesArray, setCompaniesArray] = useState(null);
   const [error, setError] = useState(null);
 
@@ -12,12 +12,13 @@ export const useCompaniesFetch = () => {
       try {
         const companiesInfo = await getCompaniesInfo();
         setCompaniesArray(companiesInfo);
+        setLoading(false);
       } catch (error) {
         setError(error);
       }
     };
     fetchData();
-  }, []);
+  }, [setLoading]);
 
   return [companiesArray, setCompaniesArray, error];
 };
