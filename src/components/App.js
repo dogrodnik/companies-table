@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { useCompaniesFetch } from "../custom-hooks/useCompaniesFetch";
 
+import { LoadingScreen } from "./LoadingScreen";
 import { Pagination } from "./Pagination";
 import { Search } from "./Search";
 import { Table } from "./Table";
@@ -26,7 +27,7 @@ function App() {
   }, [companies, currentPage]);
 
   if (error) return <div>Error</div>;
-  if (loading) return <div>Loading</div>;
+  if (loading) return <LoadingScreen />;
 
   return (
     <div className="App">

@@ -1,0 +1,11 @@
+.loading-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 10rem;
+  p {
+    margin-top: 0.5rem;
+  }
+}
