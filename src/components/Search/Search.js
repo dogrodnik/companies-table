@@ -9,8 +9,12 @@ export const Search = ({ companiesArray, setCompaniesArray }) => {
     setCompaniesArray(filteredCompanies);
   };
   return (
-    <div>
-      <input type="text" onChange={(e) => handleChange(e)} />
+    <div className="search">
+      <input
+        type="text"
+        placeholder="Search..."
+        onChange={(e) => handleChange(e)}
+      />
     </div>
   );
 };
