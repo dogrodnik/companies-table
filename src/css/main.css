@@ -30,29 +30,6 @@
   src: local("Lato-Regular"), url(../fonts/Lato-Regular.ttf) format("truetype");
 }
 
-.loading-screen {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100vh;
-  padding-bottom: 10rem;
-}
-
-.loading-screen p {
-  text-align: center;
-  margin-top: 1rem;
-}
-
 .error {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,6 +53,53 @@
   margin-bottom: 1rem;
   -webkit-filter: invert(48%) sepia(93%) saturate(497%) hue-rotate(199deg) brightness(88%) contrast(99%);
           filter: invert(48%) sepia(93%) saturate(497%) hue-rotate(199deg) brightness(88%) contrast(99%);
+}
+
+.information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10rem;
+}
+
+.information img {
+  height: 5rem;
+  margin-bottom: 1rem;
+  -webkit-filter: invert(48%) sepia(93%) saturate(497%) hue-rotate(199deg) brightness(88%) contrast(99%);
+          filter: invert(48%) sepia(93%) saturate(497%) hue-rotate(199deg) brightness(88%) contrast(99%);
+}
+
+.loading-screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  padding-bottom: 10rem;
+}
+
+.loading-screen p {
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .pagination {

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useCompaniesFetch } from "../custom-hooks/useCompaniesFetch";
 
 import { ErrorScreen } from "./ErrorScreen";
+import { Information } from "./Information";
 import { LoadingScreen } from "./LoadingScreen";
 import { Pagination } from "./Pagination";
 import { Search } from "./Search";
@@ -37,16 +38,22 @@ function App() {
         setCompanies={setCompanies}
         setCurrentPage={setCurrentPage}
       />
-      <Table
-        companies={companies}
-        setCompanies={setCompanies}
-        companiesToDisplay={companiesToDisplay}
-      />
-      <Pagination
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        pages={pages}
-      />
+      {companies.length ? (
+        <>
+          <Table
+            companies={companies}
+            setCompanies={setCompanies}
+            companiesToDisplay={companiesToDisplay}
+          />
+          <Pagination
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            pages={pages}
+          />
+        </>
+      ) : (
+        <Information />
+      )}
     </div>
   );
 }
