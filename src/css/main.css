@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato-Bold", "Roboto", sans-serif;
 }
 
 @media only screen and (max-width: 600px) {
@@ -16,5 +16,64 @@
 .App {
   background-color: white;
   height: 100vh;
+  padding: 2rem;
+}
+
+@font-face {
+  font-family: "Lato-Bold";
+  src: local("Lato-Bold"), url(../fonts/Lato-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lato-Regular";
+  src: local("Lato-Regular"), url(../fonts/Lato-Regular.ttf) format("truetype");
+}
+
+.table__wrapper {
+  margin: 1rem 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0px 2.5rem 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0px 2.5rem 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0px 2.5rem 0px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 0px 2.5rem 0px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 0px 2.5rem 0px rgba(0, 0, 0, 0.15);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead {
+  background-color: #6c7ae0;
+}
+
+table th {
+  color: white;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  padding: 1rem 0;
+}
+
+table tr {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  padding: 0rem 0.75rem;
+  -ms-grid-columns: 0.3fr 2fr 1.5fr (1fr)[3];
+      grid-template-columns: 0.3fr 2fr 1.5fr repeat(3, 1fr);
+}
+
+table tr:nth-child(even) {
+  background-color: #f8f6ff;
+}
+
+table td {
+  font-family: "Lato-Regular";
+  -ms-grid-column-align: start;
+      justify-self: start;
+  padding: 0.5rem 0rem;
+  color: #808080;
 }
 /*# sourceMappingURL=main.css.map */

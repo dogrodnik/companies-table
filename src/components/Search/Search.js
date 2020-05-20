@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { filterCompanies } from "../../../utils/filter";
+import { filterCompanies } from "../../utils/filter";
 
 export const Search = ({ companiesArray, setCompaniesArray }) => {
   const [companies] = useState(companiesArray);
