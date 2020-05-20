@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import leftArrow from "../../assets/arrow-left.png";
 import rightArrow from "../../assets/arrow-right.png";
 
@@ -18,4 +19,10 @@ export const Pagination = ({ currentPage, setCurrentPage, pages }) => {
       <img src={rightArrow} alt="Next" onClick={() => pageUp()} />
     </div>
   );
+};
+
+Pagination.propTypes = {
+  currentPage: PropTypes.number,
+  setCurrentPage: PropTypes.func,
+  pages: PropTypes.number,
 };

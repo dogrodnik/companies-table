@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 import { sort } from "../../../utils/sort";
 
@@ -46,4 +47,9 @@ export const Header = ({ companies, setCompanies }) => {
       </tr>
     </thead>
   );
+};
+
+Header.propTypes = {
+  companies: PropTypes.array,
+  setCompanies: PropTypes.func,
 };

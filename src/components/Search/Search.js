@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 import { filterCompanies } from "../../utils/filter";
 
@@ -21,4 +22,10 @@ export const Search = ({ companies, setCompanies, setCurrentPage }) => {
       />
     </div>
   );
+};
+
+Search.propTypes = {
+  companies: PropTypes.array,
+  setCompanies: PropTypes.func,
+  setCurrentPage: PropTypes.func,
 };
