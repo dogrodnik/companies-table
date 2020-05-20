@@ -1,0 +1,11 @@
+.error {
+  @include flex-center;
+  height: 100vh;
+  padding-bottom: 10rem;
+  img {
+    height: 5rem;
+    margin-bottom: 1rem;
+    filter: invert(48%) sepia(93%) saturate(497%) hue-rotate(199deg)
+      brightness(88%) contrast(99%);
+  }
+}

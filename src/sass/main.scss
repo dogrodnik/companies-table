@@ -1,7 +1,9 @@
 @import "./config";
+@import "./mixins";
 @import "./variables";
 
 @import "./components/loading-screen";
+@import "./components/error";
 @import "./components/pagination";
 @import "./components/search";
 @import "./components/table";
