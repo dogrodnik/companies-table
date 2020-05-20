@@ -31,6 +31,7 @@ export const Table = () => {
         <Search
           companiesArray={companiesArray}
           setCompaniesArray={setCompaniesArray}
+          setCurrentPage={setCurrentPage}
         />
         <div className="table__wrapper">
           <table>
