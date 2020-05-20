@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import { sort } from "../../../utils/sort";
+import { Arrow } from "./Arrow";
 
 export const Header = ({ companies, setCompanies }) => {
+  const [active, setActive] = useState();
   const [sortType, setSortType] = useState({
     id: false,
     name: false,
@@ -15,6 +17,7 @@ export const Header = ({ companies, setCompanies }) => {
 
   useEffect(() => {
     sortCompanies("id");
+    setActive("id");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -25,6 +28,7 @@ export const Header = ({ companies, setCompanies }) => {
       sortType[searchType]
     );
     setSortType({ ...sortType, [searchType]: !sortType[searchType] });
+    setActive(searchType);
     setCompanies([...sortedCompanies]);
   };
 
@@ -32,8 +36,13 @@ export const Header = ({ companies, setCompanies }) => {
     <thead>
       <tr>
         {Object.keys(sortType).map((key) => (
-          <th id={key} onClick={({ target: { id } }) => sortCompanies(id)}>
+          <th
+            key={key}
+            id={key}
+            onClick={({ target: { id } }) => sortCompanies(id)}
+          >
             {key.split(/(?=[A-Z])/).join(" ")}
+            {active === key && <Arrow isAsc={sortType[key]} />}
           </th>
         ))}
       </tr>

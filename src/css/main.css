@@ -176,11 +176,26 @@ table thead tr :first-child {
 }
 
 table th {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
   font-family: "Lato-Bold";
   color: white;
-  -ms-grid-column-align: start;
-      justify-self: start;
+  justify-self: start;
   padding: 1rem 0;
+}
+
+table th img {
+  margin-left: 0.5rem;
+  pointer-events: none;
+  height: 1rem;
 }
 
 table tr {

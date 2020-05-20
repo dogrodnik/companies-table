@@ -22,10 +22,17 @@ table {
     }
   }
   th {
+    @include flex-start;
+    width: 100%;
     font-family: "Lato-Bold";
     color: white;
     justify-self: start;
     padding: 1rem 0;
+    img {
+      margin-left: 0.5rem;
+      pointer-events: none;
+      height: 1rem;
+    }
   }
   tr {
     width: 100%;
