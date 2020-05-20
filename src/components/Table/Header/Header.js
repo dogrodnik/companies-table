@@ -38,8 +38,10 @@ export const Header = ({ companies, setCompanies }) => {
         {Object.keys(sortType).map((key) => (
           <th
             key={key}
-            id={key}
-            onClick={({ target: { id } }) => sortCompanies(id)}
+            data-field-type={key}
+            onClick={({ target }) =>
+              sortCompanies(target.getAttribute("data-field-type"))
+            }
           >
             {key.split(/(?=[A-Z])/).join(" ")}
             {active === key && <Arrow isAsc={sortType[key]} />}

@@ -28,8 +28,8 @@ const getTotalIncome = (incomes) =>
   incomes.reduce((sum, income) => sum + parseFloat(income.value), 0);
 
 //LAST MONTH INCOME DUE TO AVAILABLE DATES
-const getLastMonthIncome = (incomes) => {
-  return incomes
+const getLastMonthIncome = (incomes) =>
+  incomes
     .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
     .filter((income, index, incomes) => {
       const lastMonthDate = new Date(Date.parse(incomes[0].date));
@@ -40,4 +40,3 @@ const getLastMonthIncome = (incomes) => {
       );
     })
     .reduce((sum, income) => sum + parseFloat(income.value), 0);
-};
