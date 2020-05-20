@@ -1,21 +1,16 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export const TableRow = ({
-  id,
-  name,
-  city,
-  totalIncome,
-  averageIncome,
-  lastMonthIncome,
-}) => {
+export const TableRow = (props) => {
   return (
     <tr>
-      <td>{id}</td>
-      <td>{name}</td>
-      <td>{city}</td>
-      <td>{totalIncome}</td>
-      <td>{averageIncome}</td>
-      <td>{lastMonthIncome}</td>
+      {Object.values(props).map((value, index) => (
+        <td key={new Date().getTime() + index}>{value}</td>
+      ))}
     </tr>
   );
+};
+
+TableRow.propTypes = {
+  props: PropTypes.object,
 };

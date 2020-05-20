@@ -6,7 +6,10 @@ import { TableRow } from "./TableRow";
 export const Content = ({ companies }) => {
   return (
     <tbody>
-      {companies && companies.map(({ ...props }) => <TableRow {...props} />)}
+      {companies &&
+        companies.map((props, index) => (
+          <TableRow key={new Date().getTime() + index} {...props} />
+        ))}
     </tbody>
   );
 };
