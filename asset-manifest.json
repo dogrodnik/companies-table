@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/companies-table/static/css/main.32453eef.chunk.css",
+    "main.js": "/companies-table/static/js/main.1b3480ae.chunk.js",
+    "main.js.map": "/companies-table/static/js/main.1b3480ae.chunk.js.map",
+    "runtime-main.js": "/companies-table/static/js/runtime-main.c80ea913.js",
+    "runtime-main.js.map": "/companies-table/static/js/runtime-main.c80ea913.js.map",
+    "static/js/2.4c4aeef1.chunk.js": "/companies-table/static/js/2.4c4aeef1.chunk.js",
+    "static/js/2.4c4aeef1.chunk.js.map": "/companies-table/static/js/2.4c4aeef1.chunk.js.map",
+    "index.html": "/companies-table/index.html",
+    "precache-manifest.a129b35f372ac98df24bc2a7dcd8a1c5.js": "/companies-table/precache-manifest.a129b35f372ac98df24bc2a7dcd8a1c5.js",
+    "service-worker.js": "/companies-table/service-worker.js",
+    "static/css/main.32453eef.chunk.css.map": "/companies-table/static/css/main.32453eef.chunk.css.map",
+    "static/js/2.4c4aeef1.chunk.js.LICENSE.txt": "/companies-table/static/js/2.4c4aeef1.chunk.js.LICENSE.txt",
+    "static/media/Lato-Bold.ttf": "/companies-table/static/media/Lato-Bold.85d339d9.ttf",
+    "static/media/main.css": "/companies-table/static/media/Lato-Regular.2d36b1a9.ttf",
+    "static/media/loupe.png": "/companies-table/static/media/loupe.d29afa2d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c80ea913.js",
+    "static/js/2.4c4aeef1.chunk.js",
+    "static/css/main.32453eef.chunk.css",
+    "static/js/main.1b3480ae.chunk.js"
+  ]
+}
