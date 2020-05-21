@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Lato-Bold";
+  src: local("Lato-Bold"), url(../fonts/Lato-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lato-Regular";
+  src: local("Lato-Regular"), url(../fonts/Lato-Regular.ttf) format("truetype");
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -8,9 +18,21 @@
   color: #808080;
 }
 
+@media only screen and (max-width: 860px) {
+  * {
+    font-size: 12px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   * {
     font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  * {
+    font-size: 9px;
   }
 }
 
@@ -20,14 +42,10 @@
   padding: 1rem 1.5rem;
 }
 
-@font-face {
-  font-family: "Lato-Bold";
-  src: local("Lato-Bold"), url(../fonts/Lato-Bold.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "Lato-Regular";
-  src: local("Lato-Regular"), url(../fonts/Lato-Regular.ttf) format("truetype");
+@media only screen and (max-width: 480px) {
+  .App {
+    padding: 2rem 0.5rem;
+  }
 }
 
 .error {
@@ -169,6 +187,7 @@
 }
 
 table {
+  height: 100%;
   width: 100%;
   border-collapse: collapse;
 }
@@ -185,6 +204,12 @@ table thead tr :first-child {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 480px) {
+  table thead tr {
+    height: 6rem;
+  }
+}
+
 table th {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -195,10 +220,10 @@ table th {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: start;
   width: 100%;
   font-family: "Lato-Bold";
   color: white;
-  justify-self: start;
   padding: 1rem 0;
 }
 
@@ -206,6 +231,12 @@ table th img {
   margin-left: 0.5rem;
   pointer-events: none;
   height: 1rem;
+}
+
+@media only screen and (max-width: 480px) {
+  table th img {
+    margin-right: 0.25rem;
+  }
 }
 
 table tr {
@@ -219,6 +250,14 @@ table tr {
 
 table tr:nth-child(even) {
   background-color: #f8f6ff;
+}
+
+@media only screen and (max-width: 480px) {
+  table tr {
+    height: 4rem;
+    -ms-grid-columns: 0.5fr 1.5fr 1.5fr (1fr)[3];
+        grid-template-columns: 0.5fr 1.5fr 1.5fr repeat(3, 1fr);
+  }
 }
 
 table td {

@@ -10,6 +10,7 @@
 }
 
 table {
+  height: 100%;
   width: 100%;
   border-collapse: collapse;
   thead {
@@ -19,19 +20,25 @@ table {
       :first-child {
         text-transform: uppercase;
       }
+      @media only screen and (max-width: 480px) {
+        height: 6rem;
+      }
     }
   }
   th {
     @include flex-start;
+    text-align: start;
     width: 100%;
     font-family: "Lato-Bold";
     color: white;
-    justify-self: start;
     padding: 1rem 0;
     img {
       margin-left: 0.5rem;
       pointer-events: none;
       height: 1rem;
+      @media only screen and (max-width: 480px) {
+        margin-right: 0.25rem;
+      }
     }
   }
   tr {
@@ -41,6 +48,10 @@ table {
     grid-template-columns: 0.3fr 2fr 1.5fr repeat(3, 1fr);
     &:nth-child(even) {
       background-color: #f8f6ff;
+    }
+    @media only screen and (max-width: 480px) {
+      height: 4rem;
+      grid-template-columns: 0.5fr 1.5fr 1.5fr repeat(3, 1fr);
     }
   }
   td {
