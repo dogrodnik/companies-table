@@ -5,6 +5,10 @@ import rightArrow from "../../assets/arrow-right.png";
 
 import { Pages } from "./Pages";
 
+/**
+ * Pagination displays pages number of array and arrows to change it
+ */
+
 export const Pagination = ({ currentPage, setCurrentPage, pages }) => {
   const [arrows, setArrows] = useState(false);
 
@@ -32,7 +36,10 @@ export const Pagination = ({ currentPage, setCurrentPage, pages }) => {
 };
 
 Pagination.propTypes = {
+  /** Number of current page of the table */
   currentPage: PropTypes.number,
+  /** Function to change current page of the table  */
   setCurrentPage: PropTypes.func,
+  /** Number of all pages in the table */
   pages: PropTypes.number,
 };

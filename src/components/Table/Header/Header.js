@@ -4,6 +4,9 @@ import PropTypes from "prop-types";
 import { sort } from "../../../utils/sort";
 import { Arrow } from "./Arrow";
 
+/**
+ * Component display headers of the table. Also it has sorting by particular header functionality
+ */
 export const Header = ({ companies, setCompanies }) => {
   const [active, setActive] = useState();
   const [sortType, setSortType] = useState({
@@ -53,6 +56,8 @@ export const Header = ({ companies, setCompanies }) => {
 };
 
 Header.propTypes = {
+  /** Array of companies to sort*/
   companies: PropTypes.array,
+  /** Function to save sorted companies*/
   setCompanies: PropTypes.func,
 };

@@ -24,3 +24,10 @@ This application gets information from API about companies (eq. name, city of or
 - React
 - SASS
 - Axios
+
+## Documentation
+
+Use:
+
+- `npm run styleguide` - to run local server with documentation
+- `npm run styleguide:build` - to create build of documentation

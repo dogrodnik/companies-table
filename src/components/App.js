@@ -9,6 +9,9 @@ import { Pagination } from "./Pagination";
 import { Search } from "./Search";
 import { Table } from "./Table";
 
+/**
+ * Main component of application
+ */
 function App() {
   const [loading, setLoading] = useState(true);
   const [companies, setCompanies, error] = useCompaniesFetch(setLoading);

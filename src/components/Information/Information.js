@@ -1,6 +1,10 @@
 import React from "react";
 import loupeIcon from "../../assets/loupe.png";
 
+/**
+ * This component is used to display information about results of filtering.
+ */
+
 export const Information = () => {
   return (
     <div className="information">
