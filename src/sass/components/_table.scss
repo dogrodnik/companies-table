@@ -13,7 +13,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   thead {
-    background-color: #6c7ae0;
+    background-color: $main-color;
     tr {
       text-transform: capitalize;
       :first-child {
@@ -56,6 +56,5 @@ table {
   td {
     justify-self: start;
     padding: 0.5rem 0rem;
-    color: #808080;
   }
 }

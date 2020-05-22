@@ -4,14 +4,14 @@
     place-self: center;
     font-size: 1.25rem;
     border: 0;
-    border-bottom: 0.1rem solid #808080;
+    border-bottom: 0.1rem solid $font-color;
     background: transparent;
     padding: 0.5rem 0 0.25rem 0;
 
     &:focus {
       border: none;
       outline: none;
-      border-bottom: 0.1rem solid #6c7ae0;
+      border-bottom: 0.1rem solid $main-color;
     }
   }
 }
