@@ -6,7 +6,6 @@ import { filterCompanies } from "../../utils/filter";
 /**
  * Search is used to filter companies by user input .
  */
-
 export const Search = ({ companies, setCompanies, setCurrentPage }) => {
   const [companiesData] = useState(companies);
   const handleChange = async (e) => {

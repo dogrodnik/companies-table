@@ -7,18 +7,15 @@ import { Content } from "./Content";
 /**
  * Table includes information about companies. It contains Header and Content components.
  */
-export const Table = ({ companies, companiesToDisplay, setCompanies }) => {
-  return (
-    companies && (
-      <div className="table__wrapper">
-        <table>
-          <Header companies={companies} setCompanies={setCompanies} />
-          <Content companies={companiesToDisplay} />
-        </table>
-      </div>
-    )
+export const Table = ({ companies, companiesToDisplay, setCompanies }) =>
+  companies && (
+    <div className="table__wrapper">
+      <table>
+        <Header companies={companies} setCompanies={setCompanies} />
+        <Content companies={companiesToDisplay} />
+      </table>
+    </div>
   );
-};
 
 Table.propTypes = {
   /** Array of all fetched companies*/

@@ -6,13 +6,8 @@ import arrowUp from "../../../../assets/arrow-up.png";
 /**
  * Arrow show if filter is ascending or descending order.
  */
-export const Arrow = ({ isAsc }) => {
-  return isAsc ? (
-    <img src={arrowDown} alt="down" />
-  ) : (
-    <img src={arrowUp} alt="down" />
-  );
-};
+export const Arrow = ({ isAsc }) =>
+  isAsc ? <img src={arrowDown} alt="down" /> : <img src={arrowUp} alt="down" />;
 
 Arrow.propTypes = {
   /** Determines direction of the arrow*/
