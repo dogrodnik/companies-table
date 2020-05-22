@@ -1,3 +1,4 @@
+//FUNCTION TO GET PAGINATED PAGES
 export const getPages = (array, currentPage) => {
   let [indexDown, indexUp] =
     currentPage <= 3

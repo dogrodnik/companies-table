@@ -10,7 +10,8 @@ import { Search } from "./Search";
 import { Table } from "./Table";
 
 /**
- * Main component of application
+ * Main component of application.
+ * It fetches data from api, contain main state of application and pass it to components
  */
 function App() {
   const [loading, setLoading] = useState(true);

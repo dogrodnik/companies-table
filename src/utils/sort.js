@@ -1,3 +1,4 @@
+//SORT FUNCTINS FOR THE HEADERS SORTING
 export const sort = (companies, searchType, isAscending) =>
   searchType === "name" || searchType === "city"
     ? sortStrings(companies, searchType, isAscending)

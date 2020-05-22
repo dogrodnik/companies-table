@@ -6,9 +6,8 @@ import rightArrow from "../../assets/arrow-right.png";
 import { Pages } from "./Pages";
 
 /**
- * Pagination displays pages number of array and arrows to change it
+ * Pagination displays pages number of array and arrows to change page
  */
-
 export const Pagination = ({ currentPage, setCurrentPage, pages }) => {
   const [arrows, setArrows] = useState(false);
 
